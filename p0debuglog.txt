@@ -1,5 +1,6 @@
-gcc -g p0original.c
-gdb a.out
+
+ gcc -g p0original.c
+ gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -16,25 +17,17 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) break main
-Breakpoint 1 at 0x772: file p0original.c, line 3.
+Breakpoint 1 at 0x63e: file p0original.c, line 5.
 (gdb) r
 Starting program: /home/runner/pps-test1-rithvikteja/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p0original.c:3
-3     {
+Breakpoint 1, main () at p0original.c:5
+5       printf("my name is gayathri\n");
 (gdb) n
-5       printf("Enter your name\n");
-(gdb) n
-Enter your name
-6       scanf("%s",a);
-(gdb) n
-Gayathri
-7       printf("%s",a);
-(gdb) n
-8       return 0;
+my name is gayathri
+6       return 0;
 (gdb) c
 Continuing.
-Gayathri[Inferior 1 (process 127) exited normally]
-(gdb) q
- 
+[Inferior 1 (process 50) exited normally]
+(gdb) 
