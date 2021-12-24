@@ -2,26 +2,24 @@
 int input()
 {
   int a;
-  printf("enter the value of a\n");
+  printf("enter the numbers\n");
   scanf("%d",&a);
   return a;
 }
-int find_sum(int a,int b)
+int add(int a,int b)
 {
-  int sum;
-  sum=a+b;
-  return sum;
+  int k=a+b;
+  return k;
 }
 void output(int a,int b,int sum)
 {
-  printf(" sum of %d+%d=%d\n",a,b,sum);
+  printf("%d+%d=%d",a,b,sum);
 }
 int main()
 {
-  int x,y,z;
-  x=input();
-  y=input();
-  z=find_sum(x,y);
-  output(x,y,z);
+  int a=input();
+  int b=input();
+  int sum=add(a,b);
+  output(a,b,sum);
   return 0;
 }
