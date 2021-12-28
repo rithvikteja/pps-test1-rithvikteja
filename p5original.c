@@ -28,7 +28,6 @@ void cmp(int a,int b,int c,int *large)
   {
     printf("enter the three numbers\n");
     scanf("%d%d%d",a,b,c);
-    return;
   }
   int main()
   {

@@ -1,8 +1,9 @@
  gcc -g p3original.c
  ./a.out
 enter two numbers
-3 5
-3+5=8 gdb a.out
+6
+8
+6+8=14 gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -29,13 +30,13 @@ Breakpoint 1, main () at p3original.c:17
 (gdb) n
 19    input(&x,&y);
 (gdb) s
-input (a=0x7ffdac82f0bc, b=0x7ffdac82f0c0) at p3original.c:4
+input (a=0x7ffde7a3bd6c, b=0x7ffde7a3bd70) at p3original.c:4
 4     printf("enter two numbers\n");
 (gdb) n
 enter two numbers
 5     scanf("%d %d",a,b);
 (gdb) n
-3 6
+5 7
 6     return;
 (gdb) n
 7   }
@@ -45,15 +46,10 @@ main () at p3original.c:20
 (gdb) n
 21    output(x,y,ans);
 (gdb) s
-output (a=3, b=6, sum=9) at p3original.c:14
+output (a=5, b=7, sum=12) at p3original.c:14
 14   printf("%d+%d=%d",a,b,sum);
 (gdb) n
 15  }
 (gdb) n
 main () at p3original.c:22
-22  }(gdb) n
-__libc_start_main (main=0x5570056007f4 <main>, argc=1, argv=0x7ffdac82f1b8, 
-    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
-    stack_end=0x7ffdac82f1a8) at ../csu/libc-start.c:344
-344 ../csu/libc-start.c: No such file or directory.
-(gdb) 
+22  }(gdb) 
