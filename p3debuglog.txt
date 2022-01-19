@@ -1,9 +1,5 @@
- gcc -g p3original.c
- ./a.out
-enter two numbers
-6
-8
-6+8=14 gdb a.out
+gcc -g p3original.c
+ gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -20,36 +16,51 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x7fc: file p3original.c, line 17.
+Breakpoint 1 at 0x7fc: file p3original.c, line 16.
 (gdb) r
 Starting program: /home/runner/pps-test1-rithvikteja/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p3original.c:17
-17  {
+Breakpoint 1, main () at p3original.c:16
+16  {
 (gdb) n
-19    input(&x,&y);
+18    input(&x,&y);
 (gdb) s
-input (a=0x7ffde7a3bd6c, b=0x7ffde7a3bd70) at p3original.c:4
+input (a=0x7ffdaf9e933c, b=0x7ffdaf9e9340) at p3original.c:4
 4     printf("enter two numbers\n");
 (gdb) n
 enter two numbers
 5     scanf("%d %d",a,b);
 (gdb) n
-5 7
-6     return;
+4
+3
+6   }
 (gdb) n
-7   }
+main () at p3original.c:19
+19    add(x,y,&ans);
+(gdb) p x
+$1 = 4
+(gdb) p y
+$2 = 3
+(gdb) p ans
+$3 = 32765
+(gdb) s
+add (a=4, b=3, sum=0x7ffdaf9e9344) at p3original.c:9
+9   *sum=a+b;
+(gdb) n
+10  }
 (gdb) n
 main () at p3original.c:20
-20    add(x,y,&ans);
-(gdb) n
-21    output(x,y,ans);
+20    output(x,y,ans);
+(gdb) p ans
+$4 = 7
 (gdb) s
-output (a=5, b=7, sum=12) at p3original.c:14
-14   printf("%d+%d=%d",a,b,sum);
+output (a=4, b=3, sum=7) at p3original.c:13
+13   printf("%d+%d=%d",a,b,sum);
 (gdb) n
-15  }
+14  }
 (gdb) n
-main () at p3original.c:22
+main () at p3original.c:21
+21    return 0;
+(gdb) n
 22  }(gdb) 

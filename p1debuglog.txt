@@ -41,6 +41,3 @@ add two numbers:17
 (gdb) c
 Continuing.
 [Inferior 1 (process 308) exited normally]
-(gdb) Quit
-(gdb) Quit
-(gdb) 

@@ -17,6 +17,7 @@ void output(int a,int b,int sum)
 }
 int main()
 {
+  int a,b,sum;
   int a=input();
   int b=input();
   int sum=add(a,b);
