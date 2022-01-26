@@ -33,7 +33,7 @@ int cmp(int a,int b,int c)
     int main()
     {
       int a,b,c,large;
-      printf("enter the three numbers\n");  
+      printf("enter the three numbers\n");
       a=input();
       b=input();
       c=input();

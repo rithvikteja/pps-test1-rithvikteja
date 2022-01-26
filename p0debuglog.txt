@@ -1,4 +1,3 @@
-
  gcc -g p0original.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
