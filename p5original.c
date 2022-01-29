@@ -1,39 +1,39 @@
 #include<stdio.h>
 void cmp(int a,int b,int c,int *large)
+{ 
+if(a>b)
 {
-  if(a>b)
+  if(a>c)
   {
-    if(a>c)
-    {
-      *large=a;
-    }
-    else
-    {
-      *large=c;
-    }
+    *large=a;
   }
   else
   {
-    if(b>c)
-    {
-      *large=b;
-    }
-    else
-    {
-      *large=c;
-    }
+    *large=c;
   }
 }
-  void input(int *a,int *b,int *c)
-  {
-    printf("enter the three numbers\n");
-    scanf("%d%d%d",a,b,c);
-  }
-  int main()
-  {
-    int x,y,z,large;
-    input(&x,&y,&z);
-    cmp(x,y,z,&large);
-    printf("%d is the largest of them all",large);
-    return 0;
-  }
+else
+{
+  if(b>c)
+{
+  *large=b;
+}
+else
+{
+  *large=c;
+}
+}
+}
+void input(int *a,int *b,int *c)
+{
+  printf("enter three numbers\n");
+  scanf("%d%d%d",a,b,c);
+}
+int main()
+{
+  int a,b,c,large;
+  input(&a,&b,&c);
+  cmp(a,b,c,&large);
+  printf("%d is the largest of three",large);
+  return 0;
+}

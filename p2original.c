@@ -2,25 +2,26 @@
 int input()
 {
   int a;
-  printf("enter the numbers\n");
+  printf("enter a number\n");
   scanf("%d",&a);
   return a;
 }
 int add(int a,int b)
 {
-  int k=a+b;
-  return k;
+  int sum;
+  sum=a+b;
+  return sum;
 }
 void output(int a,int b,int sum)
 {
-  printf("%d+%d=%d",a,b,sum);
+printf("%d+%d=%d",a,b,sum);
 }
 int main()
 {
   int a,b,sum;
-  int a=input();
-  int b=input();
-  int sum=add(a,b);
+   a=input();
+   b=input();
+  sum=add(a,b);
   output(a,b,sum);
   return 0;
 }
