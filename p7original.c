@@ -6,30 +6,30 @@ int input_array_size()
   scanf("%d",&m);
   return m;
 }
-void input_array(int m,int *a)
+void input_array(int n,int a[n])
 {
    int i;
    printf("enter the value of array\n");
-   for(i=0;i<m;i++)
+   for(i=0;i<n;i++)
 {
    scanf("%d",&a[i]);
   }
 }
-int sum_n_arrays(int m,int a[m])
+int sum_n_arrays(int n,int a[n])
 {
    int i,sum;
-   for(i=0;i<m;i++)
+   for(i=0;i<n;i++)
   {
     sum=sum+a[i];
   }
   return sum;
 }
-void out_put(int m,int a[m],int sum )
+void out_put(int n,int a[n],int sum )
 {
   int i;
-  for(i=0;i<m-1;i++)
+  for(i=0;i<n-1;i++)
   printf("%d+",a[i]);
-  printf("%d=%d",a[m-1],sum);
+  printf("%d=%d",a[n-1],sum);
 }
 int main()
 {
